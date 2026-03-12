@@ -58,7 +58,7 @@ export function createNotificationClient(config: NotificationClientConfig) {
         )
       );
 
-      return results.map((result, i) => {
+      return results.map((result) => {
         if (result.status === 'fulfilled') return result.value;
         return { id: '', status: 'failed' as const };
       });
